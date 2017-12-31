@@ -54,19 +54,42 @@ regressor.fit(X_train,y_train)
 #machine made ! Machine Trained ! now what are u waiting for GET GOING START PREDICTING
 
 #y_pred--> predicted dependent variables
+#predicted values of test-cases
 y_pred = regressor.predict(X_test)
 #you can also input some value and then get expected salary prediction
-y_input_pred=regressor.predict(int(input()))
+#y_input_pred=regressor.predict(int(input()))
 print(y_pred)
 print(y_test)
-print(y_input_pred)
+#print(y_input_pred)
 
-#
+#Cool! maybe not the best model since at times we get deviation
+#no let us visalize the shit! and understand where we are going wrong (well wrong means where we are loosing some accuaract)
+#x axis-->salary
+#y axis--> expereince
+
+#actual the points reflect our training data
+plt.scatter(X_train,y_train,color='red')
+#predicitions
+
+#here we plot the predicted values using regression for the same trainging data
+plt.plot(X_train, regressor.predict(X_train),color='blue')
+plt.title('Salary vs Expereience (Training Set)')
+plt.xlabel('Years of Experience')
+print('hello')
+plt.ylabel('Salary')
+plt.show()
+#roughly 1) training + actual outcome
+#        2) training + regression based outcome
 
 
-
-
-
+#now let us plot some other testing data that is for some new data how close are we to the prediction
+plt.scatter(X_test,y_test,color='red')
+plt.plot(X_train, regressor.predict(X_train),color='blue')
+plt.title('Salary vs Expereience (Training Set)')
+plt.xlabel('Years of Experience')
+print('hello')
+plt.ylabel('Salary')
+plt.show()
 
 
 
