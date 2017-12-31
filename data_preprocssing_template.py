@@ -106,9 +106,24 @@ X_test=sc_X.transform(X_test)
 print('Scaled X_test',X_test)
 print('Scaled X_train',X_train)
 
+#next we will be working with regression! What is regression.
 
 
 
 
 
+#Regression models (both linear and non-linear) are used for predicting
+#  a real value, like salary for example. If your independent variable is time,
+# then you are forecasting future values,
+# otherwise your model is predicting present but unknown values.
 
+
+#Simple Linear Regression
+#Polynomial Regression
+#Multiple Linear Regression
+#Support Vector for Regression (SVR)
+#Decision Tree Classification
+#Random Forest Classification
+
+
+#--SAI SIDDARTHA MARAM --

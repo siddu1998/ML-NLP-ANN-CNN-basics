@@ -1,0 +1,30 @@
+Simple Linear Regression formula
+--------------------------------
+y=b0 +b1*x1
+y=a+bx
+y=dependent variable --> That is something you explain
+                      --> like salary based on years
+x=independent variable--> That is number of years which is needed to get salary(prediction)
+b=factor
+
+Salary VS Expereience
+---------------------
+1)plot
+
+2)Regression
+------------------------
+a---> y-intercpt--> here salary for a fresher
+
+salary=a+b*expereince -->This is a straight line
+
+now we have to get the best fitting line which passes through maximum points
+
+actual salary yi
+and modeled salary y'i
+
+calc --> sum of (yi-y'i)**2
+
+To get the best fitting line --> has the minum sum of (yi-y'i)**2
+
+
+
