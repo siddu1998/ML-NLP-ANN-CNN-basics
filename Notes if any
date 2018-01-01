@@ -137,3 +137,12 @@ What we will be doing in the implementation part is using backward elimination m
 
 
 
+=====================================================================================================
+Polynomial Linear Regression
+-----------------------------
+y=b0 + sum(bn*(xn**n))
+
+->this will help if the growth in not a linear equation but if it has some quadrature
+->this is super when u want to predict things which grow exponentially
+-> Then why is it still Linear?
+-> Linear always refers to the coeffcients.
