@@ -78,13 +78,15 @@ generally 4--> is called step-wise-regression
             -->Prior Knowledge
             --> You are forced to ( when you boss is an asshhole)
             --> Preparing for a backward elimination
+
+
 2. Backward Eliminatin
 
 step 1----> Select significane level to stay in the model (SL=0.05 example)
 step 2-----> Fit the full  model with all possible predictors
-step 3------> consider the predictor with the highest P-value. if P>SL, go to STEP 4. otherwise go to FIN
+step 3------> consider the predictor with the highest P-value. if P>SL, go to STEP 4. otherwise YOUR MODEL IS READY
 step 4------> Remove the predictor
-step 5------> Fit model with this variable
+step 5------> Fit model with this variable (recurse with step 3)
 
 
 
@@ -103,11 +105,34 @@ SL ---> it is a threshold against which we compare p-values.
 
 
 
+3. Forward Selection
+
+step 1: select a significance level to enter the model (e.g SL=0.05)
+step 2: Fit all simple regression models y-xn select the one with the lowest P-value
+step 3: Keep this variable and fit all possible models with one extra prerdicor added to the ones you already have
+step 4: consider the predictor with the lowesr P-value if P<sL got to step 3, otherwise go to FINISH (Keep the previous Model and throw the current model)
+
+
+4. Biredercitonal moel
+
+Step 1: Select a significae leve to enter and to stay in the model
+        e.g SLENTER = 0.05 , SLSTAY =0.05
+STEP 2 : Perform the next step of Forward selection (new variables must have P<SLENTER to enter)
+step 3 : Perform all steps of backward elimination (old variables must have P<SLSTAY to stay)
+step 4 : No new variables can enter and no old variables can exit
+            =----> Your model is ready
+
+
+5. All Possible models --> Best model but resourse comparing
+
+Step 1 : Select a criterion of goodness og fit
+Step 2 : construct all possible regression models --> 2**N - 1 total combinations
+Step 3 : Select the one with best criterion
+        =---> Your model is ready
 
 
 
-
-
+What we will be doing in the implementation part is using backward elimination methof --> Since it is quick! ROCK n ROll baby!
 
 
 
