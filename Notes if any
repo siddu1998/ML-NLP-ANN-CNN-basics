@@ -27,4 +27,88 @@ calc --> sum of (yi-y'i)**2
 To get the best fitting line --> has the minum sum of (yi-y'i)**2
 
 
+======================================================================
+Multiple Linear Regressions
+
+y=a+ SUM(bixi)
+
+y=dependent variable
+b's are the inependent variable
+
+Assumption -- Linearity | Homoscedasticity | Multovariate of errors | Independence of error | Lack of multicollinearity
+These assumptions must be true before building a linear regression model
+so check the data with the assumptions and then only build the regression
+
+Dummy Variables
+-----------------
+In the data set Profit is a dependent variable and we have lots of independent variables
+In our data set we state of the start-up it is a categorical variable
+so our approch should be using dummy variables
+make it a thumb rule that incase of categorical variables use dummy variables (remeber we used dummy vatiables in our template)
+
+Categoriacal Dummy variables act as a light switch like if 1 then new york
+                                                           0 then calafornia
+
+Dummy Variable Trap
+-----------------------------------
+NOTE ALWAYS OMIT ONE DUMMY VARIABLE from the dummy variable set
+
+
+BUILDING MODELS --> STEP-BY-STEP
+-------------------------------------
+Shit is easy if one dependent and one independent
+But these days we have more than one independent to predict dependent
+
+We are cheeky we throw some shit out (i.e we throw some independent variables out)
+Take only dominating variables (independent) only those which play a role in predicting the independent
+
+5-Thumb Methods
+--------------------------------------
+1. All-in
+*2. Backward Elimination
+*3. Forward Selection
+*4. Bidirectional Elimination
+5. Score Comparison
+
+
+2-3-4 ---> are called STEP-WISE-REGRESSION
+generally 4--> is called step-wise-regression
+
+1. All-In throw all the variables in to predict
+            -->Prior Knowledge
+            --> You are forced to ( when you boss is an asshhole)
+            --> Preparing for a backward elimination
+2. Backward Eliminatin
+
+step 1----> Select significane level to stay in the model (SL=0.05 example)
+step 2-----> Fit the full  model with all possible predictors
+step 3------> consider the predictor with the highest P-value. if P>SL, go to STEP 4. otherwise go to FIN
+step 4------> Remove the predictor
+step 5------> Fit model with this variable
+
+
+
+
+
+P-Value is basically the error you want to tolerate.
+For example you are saying I am ready to accept the null hypothesis with 95% accuracy level that means you are to ready for 5% error.
+
+For eg: If you are performing some task like Basketball shots,
+In this case 5% error means that you are ready to tolerate 5 miss out of 100 shots i.e your accuracy is 95,
+you will shots 95 times accurately & will miss 5 balls
+
+
+SL ---> it is a threshold against which we compare p-values.
+
+
+
+
+
+
+
+
+
+
+
+
 
