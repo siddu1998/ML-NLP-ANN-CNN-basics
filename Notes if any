@@ -146,3 +146,25 @@ y=b0 + sum(bn*(xn**n))
 ->this is super when u want to predict things which grow exponentially
 -> Then why is it still Linear?
 -> Linear always refers to the coeffcients.
+
+
+=======================================================================
+Decision Tree Intuition
+
+CART --:> Classification Tree
+     --:> Regression Trees
+
+x1 x2 y ---> Three values we dont need to actually see y
+
+y--> dependent variable which we have to predict
+
+We will work with only x1 | x2
+-> The Scatter Plot will be split based on some conditions determined by the algo
+-> The splits are based on mathematical entropy (information entropy)
+-> Each split is called leaf
+
+
+Check the lecture pdf's i cant show the graphs here :-) pycharm effects!
+
+so whenever a new point comes the it checks in which split it falls and then the average of all points is the predicted value
+
