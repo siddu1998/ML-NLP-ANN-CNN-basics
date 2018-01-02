@@ -1,0 +1,49 @@
+CLASSIFICATION
+=====================
+Here u classofy shit unlike regression where you predict shit
+
+1.Logistic Regression
+2.K-Nearest Neighbors (K-NN)
+3.Support Vector Machine (SVM)
+4.Kernel SVM
+5.Naive Bayes
+6.Decision Tree Classification
+7.Random Forest Classification
+
+
+1. Logistic Regression
+=======================
+If we apply pure linear regression we mess things up a bit
+so what we do to the linear regression formula i.e
+generally used to predict binary classifiction
+
+y=b0+b1*x1
+we apply sigmoid fucntion
+p = 1/(1+e**-y)
+
+and now 1+e**-y=1/p
+e**-y=1-p/p
+y=ln(p/(1+p))=b0+b1*x1 ---> this is best fitting line in the dataset
+
+this makes the graph to predict more beautiful
+with this we can probability --> probability can is denoted by p^----> In ML ^ denotes predicted value
+
+once the probabilty is predicted from the select tresholod p^ and then if <then p^ then into NO group
+                                                                       if > the p^ then into YES group
+========================
+K-Nearest Negib
+
+--> the data set is divided into two parts two neighbours
+--> we have to classify if the new data point where among the nigbhour fall
+
+
+Step 1: Choose the number K of neighbors
+Step 2: take the K nearest neighbors of the new data point, according to the euclidean distance
+Step 3: Among these K neighbors, count the number of data points in each category
+Step 4: Assign the new data point to the category where you counted the most neighbors
+
+---Model is ready
+
+eucledian distance --> {(x1-x2)^2 + (y1-y2)^2} ^0.5
+
+============================================================================
