@@ -47,3 +47,54 @@ Step 4: Assign the new data point to the category where you counted the most nei
 eucledian distance --> {(x1-x2)^2 + (y1-y2)^2} ^0.5
 
 ============================================================================
+SVM --> Support vector machine
+
+Derive a line to separate the neighbours...or here the points
+The line is chosen such that the distance between the points is marginalized
+and the two closest points are called SUPPORT VECTORS
+
+This line is called Maximum Margin Hyperplane (Maximum Margin Classifier)
+
+below --> negative hyper plan
+above  --> Positive hyper plane
+
+
+==============================
+Kernel -SVM
+
+What if ur life is so misarable and u end up having a data set that is non-linearly separable! oh yea! your fucked up mate!
+so for that u use kernel-SVM!
+
+Non-linear data set --> build decision tree by increasing dimensionality --> then get it back
+many  mapping functions exist
+Woah! u have no clue! what i have just gone thru!!check the internet and get surprosed!!
+
+A simple method is to project in 3D and the plane separting the points will be Hyperplane!
+Mapping to higher dimension generally takes a lot of computation power
+so this is slow as a snail
+
+so we have to change the approach --> this is called kernel methdo
+
+THE GUASSIAN RBF KERNEL
+==========================
+
+I really cant make computer notes for this section! Check it out in wikipedia...its to god like to miss
+
+Sigmoig Function
+==============================
+explained in the notes somewhere!
+
+Polynomial Kernels
+====================
+cool stuff check internet for more pictorial stuff it will help you understand
+
+
+
+
+
+
+
+
+
+
+
