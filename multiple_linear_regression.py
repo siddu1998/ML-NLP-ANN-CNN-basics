@@ -106,10 +106,10 @@ X_opt=X[:,[0,3,4,5]]
 regressor_OLS=sm.OLS(endog=y,exog=X_opt).fit()
 #print(regressor_OLS.summary())--->Again we have params-->useless
 
-X_opt=X[:,[0,3,5]]
+X_opt=X[:,[0,3,5]]#-----> This model might have some SL anomly but if we check this adjusted R^2 value is much better as compared to the rest of it so go for this one
 regressor_OLS=sm.OLS(endog=y,exog=X_opt).fit()
 #print(regressor_OLS.summary())
-X_opt=X[:,[0,3]]
+X_opt=X[:,[0,3]]#---------------------------------------------------------> This model may look good but adjusted R^2 decreases as compared to the previous
 regressor_OLS=sm.OLS(endog=y,exog=X_opt).fit()
 #print(regressor_OLS.summary())
 #YIPEEEE! we are done now we have found all the determinents

@@ -168,3 +168,47 @@ Check the lecture pdf's i cant show the graphs here :-) pycharm effects!
 
 so whenever a new point comes the it checks in which split it falls and then the average of all points is the predicted value
 
+=======================================================================================
+Random Forest Regression
+
+Multiple regressions --> Random Forest Regression
+
+step 1 : Pick at random K data points from the training set
+step 2 : Build the decision tree associated to those K data points
+step 3 : Choose ehte number Ntree of trees you want to build and repeat step 1 and step 2
+step 4 : For a new data point make each one of your Ntree trees preict the value of Y to for the
+         data point in question and assign the new data point the averafe across all of the predicted Y values
+
+A small change in the data set will not really effect the prediciton because there are so may trees
+that the error will get nullified
+
+========
+Remember in ML it is thumb rule to have multiple regression models and get a combined predicted values
+================================
+R- squared --> indicates how well ur model is fitted into the data
+            --> Treated as goodness of fit
+remember SSres=sum(yi-y'i)^2
+
+now forget the regreesion line we will draw an average line
+ and the distance between points squared will be SStot=sum(yi - yavg)^2
+
+ R^2 =1 - SSres/SStot  --SSresidual/SStotal
+
+ R^2 tells how good is ur SSres compared to the average line
+more R^2 then good
+less R^2 then bad-->change model
+
+========================
+Adjusted R-Squared
+
+the shit is with the incsrease in variables R^2 wont decrease
+the reason check wikipedia page...quite self explanatory
+
+Adj R^2 = 1 - (1-R^2)* (n-1)/(n-p-1)  here p is number of regressors
+                                      n is sample size
+
+                                      n-1/n-p-1 --> is treated as a penalizing factor
+
+
+==============================
+
