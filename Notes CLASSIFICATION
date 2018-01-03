@@ -89,12 +89,42 @@ Polynomial Kernels
 cool stuff check internet for more pictorial stuff it will help you understand
 
 
+=====================
+Naive Bayes
+
+P(A|B)= P(B|A) * P(A) / P(B)
+
+machin1 30 pre hour
+machin2 20 per hour
+
+out of all produced 1% are defective
+out of all defective 50% are from machin1
+
+what is the probability that a part produced by mach2 is defective
+
+Soltion -->
+ total per hour 50 p(machine1)=30/50=0.6 p(machine2)=20/50=0.4
+ P(defective)=1%
+
+ p(machine1| defective)=50%
+ p(machine2 | defective) =50%
+
+
+P(defect | Machine2)  = P(machine2|defective) * p(defective) /p(machine2)
+                      = 0.5 * 0.01/ 0.4
+                       =1.25%
 
 
 
 
 
+In this classification calculate probability and based on the probability we calssify
+========================
 
+Decision tree Classification!
 
+The data set is splits into leafs
+the split is made such that certain entry is maximized that is it tries to minimize entropy or the randomness
 
-
+simillar to decisoion tree regression
+============================
