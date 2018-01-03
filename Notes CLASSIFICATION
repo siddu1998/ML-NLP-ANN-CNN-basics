@@ -128,4 +128,17 @@ the split is made such that certain entry is maximized that is it tries to minim
 
 simillar to decisoion tree regression
 ============================
-R
+Random Forest Classification
+
+Step1 : pick random K points from the training set
+step 2 : Build the decision tree associated to there  K data points
+step 3 : Choose the number of Ntree of trees you want to build and repeat step 1&2
+step 4 : For a new data point make each one of your Ntree trees predict the cateogory
+to which the data points belongs and assign the new data point to the category that wins the majority vote
+
+
+======
+
+CAP cover from slides
+Cummalative accuracy profile
+
