@@ -1,0 +1,27 @@
+ARL
+==== Apiroi
+
+Separate products that are bought togerther so the more u search the more products you may by
+
+Apiroi--> People who bought something also bought something else
+     ---> This is how exactly how amazon reccomendation system workd
+     ---> All types of recommendation systems work like this
+
+This algo has three parts
+a) Support
+b) confidence --> Number of people who saw m1,m2 / people_who_saw_m1
+c) lift       --> Confidence/support
+
+Suppport--> users watched movie M / total_number_of_users
+
+
+
+Step 1: Set a minimum support and confidence
+Step 2: Take all the suests in transactions having higher support than minimum support
+Step 3: Take all the rules of these subsets havng higher confidence than minimum confidence
+Step 4: Sort the rules by decreasing lift
+
+the rule with highest lift is prefered--> consider for implementation
+
+=================
+Elcat Model
