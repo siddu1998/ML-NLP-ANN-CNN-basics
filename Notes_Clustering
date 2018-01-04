@@ -1,0 +1,48 @@
+Clustering
+==========
+Clustering is similar to classification, but the basis is different. In Clustering you don’t know what you are looking for, and you are trying to identify some segments or clusters in your data. When you use clustering algorithms on your dataset, unexpected things can suddenly pop up like structures, clusters and groupings you would have never thought of otherwise.
+
+In this part, you will understand and learn how to implement the following Machine Learning Clustering models:
+
+1.K-Means Clustering
+2.Hierarchical Clustering
+
+
+=====================
+K-means clustering
+
+step 1: Choose the number of K of clusters
+step 2: select at random K points, the centroids
+step 3: Assign each point to the closest data point --> This forms K clussters
+step 4: compute and place the new centroid of each cluster
+step 5: (recurse with step 4) : Reassign each data point to the new closest centroid
+if and reassignment took place recurse with 4,otherwise ur done!
+
+u can visualize it better on wikipedia
+
+Heirchaial clustering
+=======================
+divided into 2 types
+
+Agglomerative --> Bottom up approach
+ and
+ Divisve       --> Top to bottom approach
+
+agglomerative
+---------------
+ Step 1: make each data point a single-point clusters
+ step 2: take the closest data points ad make them one cluser
+ step 3: take the 2 closest clusters and make them one cluster
+ step 4: repeat step3 untill there is only one cluster
+
+Distance : choose your distance wisely based on data set and problemss
+--------
+
+the clustering is stored in memory called dendergram (not sure with the spelling)
+okay the spelling is dendograms
+
+dendogram chart --> Distance vs points
+after every step u plot it i.e corepsoing points are joined at the specific distance
+
+using dendogram we can get the number of clusters at any particular treshold
+the optimal clusters is the number of clusters below the longetst vertical line which does not intersect any extended horizontal line
