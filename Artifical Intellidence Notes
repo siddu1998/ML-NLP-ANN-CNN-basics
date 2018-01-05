@@ -1,0 +1,49 @@
+Artificial Neural Netework
+---------------------------
+the neuron ---> We need to recreate the nueron in the machine
+
+neuron recieves input from other neurons and the neuron passes info to other neurons
+
+inputs have weights
+and training involves adjusting the weight of the neuron
+
+all the weights get added  after multiplying into activation function
+then based on the activation function the signal is decided weather it should be passed
+or not
+
+
+Activation Function
+=====================
+
+four predominent activation functio
+
+x-axiss --> weighted sum
+y-axis --> value of activation function
+
+1. Treshold function
+if y > activation function then send
+   y< activation function then dont send
+
+2. Sigmoid --> generally used in the output function
+3. Rectifier (has kink at Zero) --> generally in the hidden layer
+4. Hyperbolic Tangent function
+
+Neural Network Working
+-----------------------
+not all inputs might have weight at certain times
+
+Learinng
+-------
+all output values are compared to previous value
+
+predicted value y^
+actual value y
+cost value (y^-y)* 0.5
+the y^ , based on cost value we will change the weights
+
+
+
+
+
+
+
