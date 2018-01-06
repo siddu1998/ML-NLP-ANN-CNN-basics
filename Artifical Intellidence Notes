@@ -47,3 +47,9 @@ the y^ , based on cost value we will change the weights
 
 
 
+Convolutional Neural Networks
+--------------------
+1. Convolution
+2. Max Pooling
+3. Flattening
+4. Full Connect
