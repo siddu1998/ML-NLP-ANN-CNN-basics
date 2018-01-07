@@ -1,16 +1,15 @@
-#Principle Component analysis
-#What we will do is reduce the dependent variables and thus we can technically visualize
+#kernel PCA
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 from sklearn.preprocessing import Imputer
 
-dataset=pd.read_csv('Wine.csv')
-X=dataset.iloc[:,0:13].values
-y=dataset.iloc[:,13].values
+dataset=pd.read_csv('Social_Network_Ads.csv')
+X=dataset.iloc[:,[2,3]].values
+y=dataset.iloc[:,4].values
 
-from sklearn.model_selection import train_test_split
-X_train, X_test, y_train, y_test=train_test_split(X, y, test_size=0.2,random_state=0)
+from sklearn.cross_validation import train_test_split
+X_train, X_test, y_train, y_test=train_test_split(X, y, test_size=0.25,random_state=0)
 
 
 from sklearn.preprocessing import StandardScaler
@@ -19,14 +18,12 @@ X_train=sc_X.fit_transform(X_train)
 X_test=sc_X.transform(X_test)
 
 
-#NOW MAKE THE PCA and extract new variables which help us to preict shit
-from sklearn.decomposition import PCA
-pca=PCA(n_components = 2)
-X_train=pca.fit_transform(X_train)
-X_test=pca.transform(X_test)
-explained_variance=pca.explained_variance_ratio_
 
-
+#Applying the kernel PCA
+from sklearn.decomposition import KernelPCA
+kpca=KernelPCA(n_components=2,kernel='rbf')
+X_train=kpca.fit_transform(X_train)
+X_test=kpca.transform(X_test)
 
 
 
@@ -50,8 +47,8 @@ print(cm)
 #[[65 3 ] [8 24]]]--->65+24 true and 3+8 false
 
 
-#Now since we have two new variable PC1 and PC2 we can check the weights of previous components in Pc1 and pc2
-print(pd.DataFrame(pca.components_,index = ['PC1','PC2'], columns = list(dataset)[ :-1]).T)
+
+
 
 # Visualising the Training set results
 from matplotlib.colors import ListedColormap
@@ -59,15 +56,15 @@ X_set, y_set = X_train, y_train
 X1, X2 = np.meshgrid(np.arange(start = X_set[:, 0].min() - 1, stop = X_set[:, 0].max() + 1, step = 0.01),
                      np.arange(start = X_set[:, 1].min() - 1, stop = X_set[:, 1].max() + 1, step = 0.01))
 plt.contourf(X1, X2, classifier.predict(np.array([X1.ravel(), X2.ravel()]).T).reshape(X1.shape),
-             alpha = 0.75, cmap = ListedColormap(('red', 'green','blue')))
+             alpha = 0.75, cmap = ListedColormap(('red', 'green')))
 plt.xlim(X1.min(), X1.max())
 plt.ylim(X2.min(), X2.max())
 for i, j in enumerate(np.unique(y_set)):
     plt.scatter(X_set[y_set == j, 0], X_set[y_set == j, 1],
-                c = ListedColormap(('red', 'green','blue'))(i), label = j)
-plt.title('Logistic Regression with PCA (Training set)')
-plt.xlabel('PC1')
-plt.ylabel('PC2')
+                c = ListedColormap(('red', 'green'))(i), label = j)
+plt.title('Linear Regression with Kernel PCA (Training set)')
+plt.xlabel('KPCA1')
+plt.ylabel('KPCA2')
 plt.legend()
 plt.show()
 
@@ -77,14 +74,14 @@ X_set, y_set = X_test, y_test
 X1, X2 = np.meshgrid(np.arange(start = X_set[:, 0].min() - 1, stop = X_set[:, 0].max() + 1, step = 0.01),
                      np.arange(start = X_set[:, 1].min() - 1, stop = X_set[:, 1].max() + 1, step = 0.01))
 plt.contourf(X1, X2, classifier.predict(np.array([X1.ravel(), X2.ravel()]).T).reshape(X1.shape),
-             alpha = 0.75, cmap = ListedColormap(('red', 'green','blue')))
+             alpha = 0.75, cmap = ListedColormap(('red', 'green')))
 plt.xlim(X1.min(), X1.max())
 plt.ylim(X2.min(), X2.max())
 for i, j in enumerate(np.unique(y_set)):
     plt.scatter(X_set[y_set == j, 0], X_set[y_set == j, 1],
-                c = ListedColormap(('red', 'green','blue'))(i), label = j)
-plt.title('Logistic Regression with PCA (Test set)')
-plt.xlabel('PC1')
-plt.ylabel('PC2')
+                c = ListedColormap(('red', 'green'))(i), label = j)
+plt.title('Logistic Regression with Kernel PCA (Test set)')
+plt.xlabel('Age')
+plt.ylabel('Estimated Salary')
 plt.legend()
 plt.show()
